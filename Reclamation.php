@@ -4,17 +4,19 @@ class Reclamation{
 	private $Prenom;
 	private $Identifiant;
 	private $Num;
+	private $Mail;
 	private $Facture;
 	private $Dat;
 	private $Objet;
 	private $Description;
 	private $Etat;
 	private $Note;
-	function __construct($nom,$prenom,$identifiant,$num,$facture,$dat,$objet,$description,$etat,$note){
+	function __construct($nom,$prenom,$identifiant,$num,$mail,$facture,$dat,$objet,$description,$etat,$note){
 		$this->Nom=$nom;
 		$this->Prenom=$prenom;
 		$this->Identifiant=$identifiant;
 		$this->Num=$num;
+		$this->Mail=$mail;
 		$this->Facture=$facture;
 		$this->Dat=$dat;
 		$this->Objet=$objet;
@@ -34,6 +36,9 @@ class Reclamation{
 	}
 	function getNum(){
 		return $this->Num;
+	}
+	function getMail(){
+		return $this->Mail;
 	}
 	function getFacture(){
 		return $this->Facture;
@@ -65,6 +70,9 @@ class Reclamation{
 	}
 	function setNum($num){
 		$this->Num=$num;
+	}
+	function setMail($mail){
+		$this->Mail=$mail;
 	}
 	function setFacture($facture){
 		$this->Facture=$facture;
